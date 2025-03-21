@@ -243,7 +243,7 @@ const BookPopularityVisualization = () => {
     { title: "The Anxious Generation", author: "Jonathan Haidt", checkouts: 98, genre: "Non-Fiction", coverUrl: "images/anxious.jpg" },
     { title: "The Lost Bookshop", author: "Evie Woods", checkouts: 91, genre: "Contemporary Fiction", coverUrl: "images/lostbookshop.jpg" },
     { title: "First Lie Wins", author: "Ashley Elston", checkouts: 82, genre: "Thriller", coverUrl: "images/firstliewins.jpg" },
-    { title: "Parable of the Sower", author: "Octavia E. Butler", checkouts: 80, genre: "Science Fiction", coverUrl: "images/parable.jpg" },
+    { title: "Parable of the Sower", author: "Octavia E. Butler", checkouts: 80, genre: "Science Fiction", coverUrl: "images/parableofsower.jpg" },
     { title: "The God of the Woods", author: "Liz Moore", checkouts: 79, genre: "Literary Fiction", coverUrl: "images/godofwoods.jpg" },
     { title: "The Borrowed Life of Frederick Fife", author: "Anna Johnston", checkouts: 79, genre: "Literary Fiction", coverUrl: "images/borrowedlife.jpg" },
     { title: "The Briar Club", author: "Kate Quinn", checkouts: 79, genre: "Historical Fiction", coverUrl: "images/briarclub.jpg" }
