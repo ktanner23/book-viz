@@ -232,21 +232,21 @@ const BookPopularityVisualization = () => {
   
   // Updated book data with titles from your list and assigned genres
   const popularBooks = [
-    { title: "The Frozen River", author: "Arial Lawhon", checkouts: 235, genre: "Historical Fiction", coverUrl: "/images/frozenriver.jpg" },
-    { title: "The Women", author: "Kristin Hannah", checkouts: 193, genre: "Historical Fiction", coverUrl: "/images/thewomen.jpg" },
-    { title: "James", author: "Percival Everett", checkouts: 189, genre: "Literary Fiction", coverUrl: "/images/james.jpg" },
-    { title: "Remarkably Bright Creatures", author: "Shelby Van Pelt", checkouts: 153, genre: "Literary Fiction", coverUrl: "/images/creatures.jpg" },
-    { title: "Solito", author: "Javier Zamora", checkouts: 146, genre: "Memoir", coverUrl: "/images/solito.jpg" },
-    { title: "West with Giraffes", author: "Lynda Rutledge", checkouts: 117, genre: "Historical Fiction", coverUrl: "/images/west.jpg" },
-    { title: "The Heaven & Earth Grocery Store", author: "James McBride", checkouts: 112, genre: "Historical Fiction", coverUrl: "/images/heaven.jpg" },
+    { title: "The Frozen River", author: "Arial Lawhon", checkouts: 235, genre: "Historical Fiction", coverUrl: "images/frozenriver.jpg" },
+    { title: "The Women", author: "Kristin Hannah", checkouts: 193, genre: "Historical Fiction", coverUrl: "images/thewomen.jpg" },
+    { title: "James", author: "Percival Everett", checkouts: 189, genre: "Literary Fiction", coverUrl: "images/james.jpg" },
+    { title: "Remarkably Bright Creatures", author: "Shelby Van Pelt", checkouts: 153, genre: "Literary Fiction", coverUrl: "images/creatures.jpg" },
+    { title: "Solito", author: "Javier Zamora", checkouts: 146, genre: "Memoir", coverUrl: "images/solito.jpg" },
+    { title: "West with Giraffes", author: "Lynda Rutledge", checkouts: 117, genre: "Historical Fiction", coverUrl: "images/west.jpg" },
+    { title: "The Heaven & Earth Grocery Store", author: "James McBride", checkouts: 112, genre: "Historical Fiction", coverUrl: "images/heaven.jpg" },
     { title: "The Wedding People", author: "Alison Espach", checkouts: 105, genre: "Contemporary Fiction", coverUrl: "images/weddingpeople.jpg" },
-    { title: "The Anxious Generation", author: "Jonathan Haidt", checkouts: 98, genre: "Non-Fiction", coverUrl: "/images/anxious.jpg" },
-    { title: "The Lost Bookshop", author: "Evie Woods", checkouts: 91, genre: "Contemporary Fiction", coverUrl: "/images/lostbookshop.jpg" },
-    { title: "First Lie Wins", author: "Ashley Elston", checkouts: 82, genre: "Thriller", coverUrl: "/images/firstliewins.jpg" },
-    { title: "Parable of the Sower", author: "Octavia E. Butler", checkouts: 80, genre: "Science Fiction", coverUrl: "/images/parable.jpg" },
-    { title: "The God of the Woods", author: "Liz Moore", checkouts: 79, genre: "Literary Fiction", coverUrl: "/images/godofwoods.jpg" },
-    { title: "The Borrowed Life of Frederick Fife", author: "Anna Johnston", checkouts: 79, genre: "Literary Fiction", coverUrl: "/images/borrowedlife.jpg" },
-    { title: "The Briar Club", author: "Kate Quinn", checkouts: 79, genre: "Historical Fiction", coverUrl: "/images/briarclub.jpg" }
+    { title: "The Anxious Generation", author: "Jonathan Haidt", checkouts: 98, genre: "Non-Fiction", coverUrl: "images/anxious.jpg" },
+    { title: "The Lost Bookshop", author: "Evie Woods", checkouts: 91, genre: "Contemporary Fiction", coverUrl: "images/lostbookshop.jpg" },
+    { title: "First Lie Wins", author: "Ashley Elston", checkouts: 82, genre: "Thriller", coverUrl: "images/firstliewins.jpg" },
+    { title: "Parable of the Sower", author: "Octavia E. Butler", checkouts: 80, genre: "Science Fiction", coverUrl: "images/parable.jpg" },
+    { title: "The God of the Woods", author: "Liz Moore", checkouts: 79, genre: "Literary Fiction", coverUrl: "images/godofwoods.jpg" },
+    { title: "The Borrowed Life of Frederick Fife", author: "Anna Johnston", checkouts: 79, genre: "Literary Fiction", coverUrl: "images/borrowedlife.jpg" },
+    { title: "The Briar Club", author: "Kate Quinn", checkouts: 79, genre: "Historical Fiction", coverUrl: "images/briarclub.jpg" }
   ].sort((a, b) => b.checkouts - a.checkouts);
   
   // Expanded genre color palette
