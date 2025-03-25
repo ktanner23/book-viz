@@ -91,7 +91,7 @@ const styles = {
   },
   tooltip: {
     position: 'absolute',
-    transform: 'translate(-50%, -180%)',
+    transform: 'translate(-50%, -100%)',
     left: '50%',
     top: '0',
     backgroundColor: 'black',
@@ -262,7 +262,7 @@ const BookPopularityVisualization = () => {
     
     return (
       <div style={styles.bookshelfContainer}>
-        <h3 style={styles.bookshelfTitle}>Virtual Bookshelf - Most Popular Books</h3>
+      
         <div style={styles.bookshelfWrapper}>
           {popularBooks.map((book, i) => {
             // Increase the minimum height to make spines more legible
@@ -347,8 +347,7 @@ const BookPopularityVisualization = () => {
             })}
           </div>
           <div style={styles.description}>
-            <p style={styles.descriptionText}>Each book spine represents a popular title. Taller spines indicate more checkouts.</p>
-            <p style={styles.descriptionText}>Hover over a spine to see cover image and details. Colors represent different genres.</p>
+            <p style={styles.descriptionText}>Taller spines indicate more checkouts.Hover over a spine to see cover image.</p>
           </div>
         </div>
       </div>
@@ -394,7 +393,7 @@ const BookPopularityVisualization = () => {
     <div style={styles.container}>
       <div style={styles.header}>
         <h1 style={styles.title}>Top 15 loaned books</h1>
-        <p style={styles.subtitle}>Michigan eLibrary Catalog: Jan.1 - March 18, 2025y</p>
+        <p style={styles.subtitle}>Michigan eLibrary Catalog: Jan.1 - March 18, 2025</p>
       </div>
       
       <div style={styles.tabContainer}>
