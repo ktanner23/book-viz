@@ -98,7 +98,7 @@ const styles = {
     color: 'white',
     padding: '8px',
     borderRadius: '4px',
-    width: '150px',
+    width: '130px',
     fontSize: '12px',
     opacity: 0,
     transition: 'opacity 0.2s ease',
