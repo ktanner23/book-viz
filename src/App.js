@@ -140,7 +140,7 @@ const styles = {
   },
   bookCoverVisible: {
     opacity: 1,
-    top: '-150px'
+    top: '-120px'
   },
   legendContainer: {
     marginTop: '140px',  // Increased to make room for covers
