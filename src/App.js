@@ -91,7 +91,7 @@ const styles = {
   },
   tooltip: {
     position: 'absolute',
-    transform: 'translate(-50%, -110%)',
+    transform: 'translate(-50%, -180%)',
     left: '50%',
     top: '0',
     backgroundColor: 'black',
@@ -140,7 +140,7 @@ const styles = {
   },
   bookCoverVisible: {
     opacity: 1,
-    top: '-100px'
+    top: '-150px'
   },
   legendContainer: {
     marginTop: '140px',  // Increased to make room for covers
