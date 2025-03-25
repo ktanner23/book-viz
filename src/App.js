@@ -421,7 +421,7 @@ const dynamicTooltipStyle = {
   const BookGridViz = () => {
     return (
       <div style={{padding: '20px'}}>
-        <div style={styles.gridContainer}>
+        <div style={gridContainerStyle}>
           {popularBooks.map((book, i) => {
             const gridBookStyle = {
               ...styles.gridBook,
