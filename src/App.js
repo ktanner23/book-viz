@@ -134,7 +134,7 @@ const styles = {
     opacity: 0,
     transition: 'all 0.3s ease',
     zIndex: 40,
-    transform: 'translate(-50%, -200%)',
+    transform: 'translate(-50%, -180%)',
     left: '50%',
     top: '-10px'
   },
@@ -358,7 +358,6 @@ const BookPopularityVisualization = () => {
   const BookGridViz = () => {
     return (
       <div style={{padding: '20px'}}>
-        <h3 style={styles.bookshelfTitle}>Popular Books - Cover Grid</h3>
         <div style={styles.gridContainer}>
           {popularBooks.map((book, i) => {
             const gridBookStyle = {
