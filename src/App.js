@@ -140,7 +140,7 @@ const styles = {
   },
   bookCoverVisible: {
     opacity: 1,
-    top: '-100px'
+    top: '-110px'
   },
   legendContainer: {
     marginTop: '140px',  // Increased to make room for covers
@@ -180,7 +180,7 @@ const styles = {
     gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
     gap: '24px',
     margin: '0 auto',
-    maxWidth: '1000px'
+    maxWidth: '90px'
   },
   gridBook: {
     display: 'flex',
