@@ -316,12 +316,20 @@ const BookPopularityVisualization = () => {
               ...styles.tooltip,
               ...(hoveredBook === i ? styles.tooltipVisible : {}),
               ...(isMobile ? {
-                // Mobile styles
-                left: 'auto',
-                right: '-160px',
-                top: '50%',
-                transform: 'translateY(-50%)'
-              } : {})
+                position: 'absolute',
+                left: '0',
+                right: '0',
+                top: '0',
+                bottom: '0',
+                width: '100%',
+                height: '100%',
+                background: 'rgba(0,0,0,0.85)', // Semi-transparent background
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                zIndex: 60
+              }: {})
             };
             
             // Dynamic title style
