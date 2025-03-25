@@ -180,7 +180,7 @@ const styles = {
     gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
     gap: '24px',
     margin: '0 auto',
-    maxWidth: '90px'
+    maxWidth: '1200px'
   },
   gridBook: {
     display: 'flex',
