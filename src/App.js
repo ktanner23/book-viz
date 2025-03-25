@@ -238,10 +238,10 @@ const BookPopularityVisualization = () => {
     
     window.addEventListener('resize', handleResize);
     handleResize(); // Call immediately on mount
-    <p style={styles.subtitle}>
+    
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
+   
   // Updated book data with titles from your list and assigned genres
   const popularBooks = [
     { title: "The Frozen River", author: "Arial Lawhon", checkouts: 235, genre: "Fiction", coverUrl: "images/frozenriver.jpg" },
