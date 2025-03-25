@@ -358,7 +358,6 @@ const BookPopularityVisualization = () => {
   const BookGridViz = () => {
     return (
       <div style={{padding: '20px'}}>
-        <h3 style={styles.bookshelfTitle}>Popular Books - Cover Grid</h3>
         <div style={styles.gridContainer}>
           {popularBooks.map((book, i) => {
             const gridBookStyle = {
