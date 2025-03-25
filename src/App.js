@@ -291,13 +291,23 @@ const BookPopularityVisualization = () => {
             const tilt = (Math.random() * 8 - 4) * 0.5;
             
             // Book specific styles that depend on data
-            const bookStyle = {
+            const dynamicBookStyle = {
               ...styles.book,
-              height: `${height}px`,
-              width: `${width}px`,
-              background: genreColors[book.genre] || "#ccc",
-              transform: `rotate(${tilt}deg)`,
-              ...(hoveredBook === i ? styles.bookHover : {})
+              ...(isMobile ? {
+                // Mobile styles
+                transform: 'rotate(0deg)',
+                margin: '10px 0',
+                width: '90%',
+                height: '60px',
+                maxWidth: '400px'
+              } : {
+                // Desktop styles - keep original
+                height: `${height}px`,
+                width: `${width}px`,
+                background: genreColors[book.genre] || "#ccc",
+                transform: `rotate(${tilt}deg)`,
+                ...(hoveredBook === i ? styles.bookHover : {})
+              })
             };
             
             // Dynamic tooltip style
