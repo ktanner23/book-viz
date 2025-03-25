@@ -297,9 +297,9 @@ const BookPopularityVisualization = () => {
                 // Mobile styles
                 transform: 'rotate(0deg)',
                 margin: '10px 0',
-                width: '60%',
-                height: '30px',
-                maxWidth: '250px',
+                width: '100%',
+                height: '40px',
+                maxWidth: '400px',
                 background: genreColors[book.genre] || "#ccc",
               } : {
                 // Desktop styles - keep original
