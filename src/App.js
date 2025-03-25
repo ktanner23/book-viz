@@ -299,7 +299,8 @@ const BookPopularityVisualization = () => {
                 margin: '10px 0',
                 width: '90%',
                 height: '60px',
-                maxWidth: '400px'
+                maxWidth: '400px',
+                background: genreColors[book.genre] || "#ccc",
               } : {
                 // Desktop styles - keep original
                 height: `${height}px`,
