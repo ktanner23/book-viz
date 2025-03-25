@@ -237,6 +237,8 @@ const BookPopularityVisualization = () => {
     };
     
     window.addEventListener('resize', handleResize);
+    handleResize(); // Call immediately on mount
+    <p style={styles.subtitle}>
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   
@@ -468,6 +470,12 @@ const dynamicTooltipStyle = {
         <p style={styles.subtitle}>Michigan eLibrary Catalog: Jan.1 - March 18, 2025</p>
       </div>
       
+      {isMobile ? (
+      // Mobile: Show only Cover Grid
+      <BookGridViz />
+    ) : (
+      // Desktop: Show tabs and active tab content
+      <>
       <div style={styles.tabContainer}>
         <button 
           style={{
@@ -491,6 +499,8 @@ const dynamicTooltipStyle = {
       
       {activeTab === 'bookshelf' && <BookshelfViz />}
       {activeTab === 'grid' && <BookGridViz />}
+      </>
+    )}
     </div>
   );
 };
