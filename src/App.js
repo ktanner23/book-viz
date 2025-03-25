@@ -80,7 +80,7 @@ const styles = {
     transform: 'rotate(90deg) translateY(-100%)',
     transformOrigin: 'left top',
     top: '10px',
-    left: '18px',
+    left: '15px',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
@@ -347,7 +347,7 @@ const BookPopularityVisualization = () => {
             })}
           </div>
           <div style={styles.description}>
-            //<p style={styles.descriptionText}>Taller spines indicate more checkouts.Hover over a spine to see cover image.</p>
+            <p style={styles.descriptionText}>Taller spines indicate more checkouts.Hover over a spine to see cover image.</p>
           </div>
         </div>
       </div>
