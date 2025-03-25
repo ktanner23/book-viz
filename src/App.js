@@ -356,15 +356,15 @@ const BookPopularityVisualization = () => {
             return (
               <div 
                 key={i}
-                style={dynamicBookStyle}  // USE THE DYNAMIC STYLE HERE instead of bookStyle
+                style={dynamicBookStyle}  
                 onMouseEnter={() => setHoveredBook(i)}
                 onMouseLeave={() => setHoveredBook(null)}
               >
-                <div style={dynamicTitleStyle}>  // USE DYNAMIC STYLE HERE
+                <div style={dynamicTitleStyle}>  
                   {book.title.length > 20 ? book.title.substring(0, 18) + "..." : book.title}
                 </div>
                 
-                <div style={dynamicTooltipStyle}>  // USE DYNAMIC STYLE HERE
+                <div style={dynamicTooltipStyle}> 
                   <p style={styles.tooltipTitle}>{book.title}</p>
                   <p style={styles.tooltipAuthor}>by {book.author}</p>
                   <p style={styles.tooltipInfo}>{book.checkouts} checkouts</p>
@@ -373,7 +373,7 @@ const BookPopularityVisualization = () => {
                 <img 
                   src={book.coverUrl} 
                   alt={`Cover of ${book.title}`} 
-                  style={dynamicCoverStyle}  // USE DYNAMIC STYLE HERE
+                  style={dynamicCoverStyle}
                 />
               </div>
             );
