@@ -134,7 +134,7 @@ const styles = {
     opacity: 0,
     transition: 'all 0.3s ease',
     zIndex: 40,
-    transform: 'translate(-50%, -150%)',
+    transform: 'translate(-50%, -90%)',
     left: '50%',
     top: '-10px'
   },
