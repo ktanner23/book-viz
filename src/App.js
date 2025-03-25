@@ -229,11 +229,11 @@ const styles = {
 const BookPopularityVisualization = () => {
   const [activeTab, setActiveTab] = useState('bookshelf');
   const [hoveredBook, setHoveredBook] = useState(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
   
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 600);
     };
     
     window.addEventListener('resize', handleResize);
