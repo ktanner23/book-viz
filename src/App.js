@@ -244,7 +244,7 @@ const BookPopularityVisualization = () => {
    
   // Updated book data with titles from your list and assigned genres
   const popularBooks = [
-    { title: "The Frozen River", author: "Arial Lawhon", checkouts: 235, genre: "Fiction", coverUrl: "images/frozenriver.jpg" },
+    { title: "The Frozen River", author: "Ariel Lawhon", checkouts: 235, genre: "Fiction", coverUrl: "images/frozenriver.jpg" },
     { title: "The Women", author: "Kristin Hannah", checkouts: 193, genre: "Fiction", coverUrl: "images/thewomen.jpg" },
     { title: "James", author: "Percival Everett", checkouts: 189, genre: "Fiction", coverUrl: "images/james.jpg" },
     { title: "Remarkably Bright Creatures", author: "Shelby Van Pelt", checkouts: 153, genre: "Fiction", coverUrl: "images/creatures.jpg" },
