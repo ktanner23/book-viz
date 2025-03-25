@@ -229,6 +229,16 @@ const styles = {
 const BookPopularityVisualization = () => {
   const [activeTab, setActiveTab] = useState('bookshelf');
   const [hoveredBook, setHoveredBook] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   
   // Updated book data with titles from your list and assigned genres
   const popularBooks = [
@@ -262,8 +272,16 @@ const BookPopularityVisualization = () => {
     
     return (
       <div style={styles.bookshelfContainer}>
-      
-        <div style={styles.bookshelfWrapper}>
+        
+        
+        <div style={{
+        ...styles.bookshelfWrapper,
+        ...(isMobile ? {
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'flex-start'
+        } : {})
+      }}>
           {popularBooks.map((book, i) => {
             // Increase the minimum height to make spines more legible
             const height = 150 + (book.checkouts / maxCheckouts) * 250;
@@ -282,44 +300,70 @@ const BookPopularityVisualization = () => {
               ...(hoveredBook === i ? styles.bookHover : {})
             };
             
-            const tooltipStyle = {
+            // Dynamic tooltip style
+            const dynamicTooltipStyle = {
               ...styles.tooltip,
-              ...(hoveredBook === i ? styles.tooltipVisible : {})
+              ...(hoveredBook === i ? styles.tooltipVisible : {}),
+              ...(isMobile ? {
+                // Mobile styles
+                left: 'auto',
+                right: '-160px',
+                top: '50%',
+                transform: 'translateY(-50%)'
+              } : {})
             };
             
-            const bookTitleStyle = {
+            // Dynamic title style
+            const dynamicTitleStyle = {
               ...styles.bookTitle,
-              width: `${height - 20}px`
+              ...(isMobile ? {
+                // Mobile styles
+                transform: 'none',
+                width: 'auto',
+                maxWidth: '80%',
+                top: '50%',
+                left: '15px',
+                textTransform: 'translateY(-50%)'
+              } : {
+                // Desktop styles - keep original
+                width: `${height - 20}px`,
+                transform: 'rotate(90deg) translateY(-100%)'
+              })
             };
             
-            const bookCoverStyle = {
+            // Dynamic cover style
+            const dynamicCoverStyle = {
               ...styles.bookCover,
-              ...(hoveredBook === i ? styles.bookCoverVisible : {})
-            };
-            
+              ...(hoveredBook === i ? styles.bookCoverVisible : {}),
+              ...(isMobile ? {
+                // Mobile styles
+                left: 'auto',
+                right: '-100px',
+                top: '50%',
+                transform: 'translateY(-50%)'
+              } : {})
+            };        
             return (
               <div 
                 key={i}
-                style={bookStyle}
+                style={dynamicBookStyle}  // USE THE DYNAMIC STYLE HERE instead of bookStyle
                 onMouseEnter={() => setHoveredBook(i)}
                 onMouseLeave={() => setHoveredBook(null)}
               >
-                <div style={bookTitleStyle}>
+                <div style={dynamicTitleStyle}>  // USE DYNAMIC STYLE HERE
                   {book.title.length > 20 ? book.title.substring(0, 18) + "..." : book.title}
                 </div>
                 
-                <div style={tooltipStyle}>
+                <div style={dynamicTooltipStyle}>  // USE DYNAMIC STYLE HERE
                   <p style={styles.tooltipTitle}>{book.title}</p>
                   <p style={styles.tooltipAuthor}>by {book.author}</p>
                   <p style={styles.tooltipInfo}>{book.checkouts} checkouts</p>
-              
                 </div>
                 
-                {/* Book cover thumbnail */}
                 <img 
                   src={book.coverUrl} 
                   alt={`Cover of ${book.title}`} 
-                  style={bookCoverStyle}
+                  style={dynamicCoverStyle}  // USE DYNAMIC STYLE HERE
                 />
               </div>
             );
