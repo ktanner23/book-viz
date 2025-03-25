@@ -425,7 +425,15 @@ const dynamicTooltipStyle = {
           {popularBooks.map((book, i) => {
             const gridBookStyle = {
               ...styles.gridBook,
-              ...(hoveredBook === i ? styles.gridBookHover : {})
+              ...(hoveredBook === i ? styles.gridBookHover : {
+                // Restore desktop grid item styles
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                padding: '16px',
+                borderRadius: '8px',
+                backgroundColor: '#f8f9fa'
+              })
             };
             
             return (
