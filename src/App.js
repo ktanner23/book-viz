@@ -267,7 +267,7 @@ const BookPopularityVisualization = () => {
           {popularBooks.map((book, i) => {
             // Increase the minimum height to make spines more legible
             const height = 150 + (book.checkouts / maxCheckouts) * 250;
-            const width = 40; // Slightly wider spines
+            const width = 30; // Slightly wider spines
             
             // Generate a random tilt between -5 and 5 degrees
             const tilt = (Math.random() * 8 - 4) * 0.5;
@@ -347,7 +347,7 @@ const BookPopularityVisualization = () => {
             })}
           </div>
           <div style={styles.description}>
-            <p style={styles.descriptionText}>Taller spines indicate more checkouts.Hover over a spine to see cover image.</p>
+            //<p style={styles.descriptionText}>Taller spines indicate more checkouts.Hover over a spine to see cover image.</p>
           </div>
         </div>
       </div>
