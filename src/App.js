@@ -312,7 +312,7 @@ const BookPopularityVisualization = () => {
                   <p style={styles.tooltipTitle}>{book.title}</p>
                   <p style={styles.tooltipAuthor}>by {book.author}</p>
                   <p style={styles.tooltipInfo}>{book.checkouts} checkouts</p>
-                  <p style={styles.tooltipGenre}>{book.genre}</p>
+              
                 </div>
                 
                 {/* Book cover thumbnail */}
@@ -393,8 +393,8 @@ const BookPopularityVisualization = () => {
   return (
     <div style={styles.container}>
       <div style={styles.header}>
-        <h1 style={styles.title}>Library Book Popularity</h1>
-        <p style={styles.subtitle}>Top checked-out books from the library</p>
+        <h1 style={styles.title}>Top 15 loaned books</h1>
+        <p style={styles.subtitle}>Michigan eLibrary Catalog: Jan.1 - March 18, 2025y</p>
       </div>
       
       <div style={styles.tabContainer}>
